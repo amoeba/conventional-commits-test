@@ -23,4 +23,4 @@ jobs:
           npm install @commitlint/cli @commitlint/config-conventional
       - name: Check PR title follows conventional commits spec
         run: |
-          echo "${{ github.event.pull_request.title }}" | npx commitlint --config '{"extends":["@commitlint/config-conventional"]}'
+          echo "${{ github.event.pull_request.title }}" | npx commitlint --extends @commitlint/config-conventional
